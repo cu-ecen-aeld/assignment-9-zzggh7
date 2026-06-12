@@ -1,0 +1,5 @@
+config BR2_PACKAGE_LDD
+	bool "LDD"
+    depends on BR2_LINUX_KERNEL
+	help
+	  Linux Device Driver exmaple modules (misc-modules, scull)
