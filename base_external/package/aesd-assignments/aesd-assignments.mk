@@ -35,6 +35,7 @@ define AESD_ASSIGNMENTS_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/aesd-char-driver/aesdchar_load $(TARGET_DIR)/usr/bin/aesdchar_load
 	$(INSTALL) -m 0755 $(@D)/aesd-char-driver/aesdchar_unload $(TARGET_DIR)/usr/bin/aesdchar_unload
 	$(INSTALL) -m 0755 $(@D)/aesd-char-driver/aesdchar-driver-start-stop $(TARGET_DIR)/etc/init.d/S98aesdchar
+	$(INSTALL) -d -m 0755 $(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/extra
 	$(INSTALL) -m 0644 $(@D)/aesd-char-driver/aesdchar.ko \
 		$(TARGET_DIR)/lib/modules/$(LINUX_VERSION_PROBED)/extra/aesdchar.ko
 endef	
